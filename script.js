@@ -1,12 +1,14 @@
-const BASE_URL = "https://projeto-previsao-do-tempo-com-ia.onrender.com";
-
+// ================================
+// FUNÇÃO PARA BUSCAR PREVISÃO
+// ================================
 async function clicarNoBotao() {
     const cidade = encodeURIComponent(
         document.querySelector('.input-cidade').value
     );
 
     const caixaMedia = document.querySelector('.caixa-media');
-    const endereco = `${BASE_URL}/weather/${cidade}`;
+    // URL da API online no Render
+    const endereco = `https://projeto-previsao-do-tempo-com-ia.onrender.com/weather/${cidade}`;
 
     try {
         const respostaServidor = await fetch(endereco);
@@ -29,6 +31,9 @@ async function clicarNoBotao() {
     }
 }
 
+// ================================
+// FUNÇÃO PARA VOZ
+// ================================
 function falarVoz() {
     const reconhecimento = new window.webkitSpeechRecognition();
     reconhecimento.lang = "pt-BR";
@@ -42,6 +47,9 @@ function falarVoz() {
     };
 }
 
+// ================================
+// FUNÇÃO PARA SUGESTÃO DE ROUPA
+// ================================
 async function sugestaoIA() {
     const temperatura = document.querySelector('.temperatura').textContent;
     const umidade = document.querySelector('.umidade').textContent;
@@ -51,7 +59,7 @@ async function sugestaoIA() {
     descricao.textContent = "🤖 Pensando na melhor roupa...";
 
     try {
-        const resposta = await fetch(`${BASE_URL}/ia/roupa`, {
+        const resposta = await fetch("https://projeto-previsao-do-tempo-com-ia.onrender.com/ia/roupa", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

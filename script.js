@@ -25,11 +25,11 @@ async function clicarNoBotao() {
         }
 
         caixaMedia.innerHTML = `
-            <h2 class="cidade">${dados.name}</h2>
-            <p class="temperatura">${Math.round(dados.main.temp)}°C</p>
-            <p class="umidade">${dados.main.humidity}%</p>
-            <button class="botao-roupa" onclick="sugestaoIA()">Sugestão de Roupa</button>
-            <p class="descricao">${dados.weather[0].description}</p>
+            <h2 class="cidade">📍 ${dados.name}</h2>
+            <p class="temperatura">🌡️ ${Math.round(dados.main.temp)}°C</p>
+            <p class="umidade">💧 ${dados.main.humidity}%</p>
+            <button class="botao-roupa" onclick="sugestaoIA()">👕 Sugestão de Roupa</button>
+            <p class="descricao">🌥️ ${dados.weather[0].description}</p>
         `;
     } catch (erro) {
         console.error("Erro ao conectar com o servidor:", erro);

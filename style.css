@@ -1,0 +1,202 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/14500743/pexels-photo-14500743.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+.linha-busca {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 450px;
+    max-width: 90%;
+    padding: 12px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.topo-busca {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.input-cidade {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0000002b;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+}
+
+.botao {
+    padding: 10px;
+    border: none;
+    background-color: #7c7c7c2b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.img-botao {
+    width: 20px;
+}
+
+.botao:hover {
+    background-color: #7c7c7c2b;
+    transform: scale(1.2);
+}
+
+i {
+    color: white;
+}
+
+.caixa-media {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.cidade {
+    font-size: 28px;
+}
+
+.temperatura {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.umidade {
+    color: white;
+}
+
+.botao-roupa {
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 106, 244);
+    border: none;
+    cursor: pointer;
+     
+}
+
+.botao-roupa:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+.descricao {
+     color: white;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 300px;  
+    overflow-y: auto;    
+    white-space: pre-wrap; 
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+}
+
+.cidade,
+.temperatura,
+.umidade {
+    color: white;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 500px) {
+    .linha-busca {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .input-cidade {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .botao {
+        padding: 8px;
+    }
+
+    .botao-roupa {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .cidade {
+        font-size: 24px;
+    }
+
+    .temperatura {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 350px) {
+    .linha-busca {
+        padding: 8px;
+    }
+
+    .input-cidade {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .botao {
+        padding: 6px;
+    }
+
+    .botao-roupa {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .cidade {
+        font-size: 20px;
+    }
+
+    .temperatura {
+        font-size: 22px;
+    }
+
+    .descricao {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

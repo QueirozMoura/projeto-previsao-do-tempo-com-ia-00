@@ -1,6 +1,3 @@
-// ================================
-// FUNÇÃO PARA BUSCAR PREVISÃO
-// ================================
 async function clicarNoBotao() {
     const cidadeInput = document.querySelector('.input-cidade').value.trim();
 
@@ -12,7 +9,7 @@ async function clicarNoBotao() {
     const cidade = encodeURIComponent(cidadeInput);
     const caixaMedia = document.querySelector('.caixa-media');
 
-    // URL da API online no Render
+
     const endereco = `https://projeto-previsao-do-tempo-com-ia.onrender.com/weather/${cidade}`;
 
     try {
@@ -37,9 +34,7 @@ async function clicarNoBotao() {
     }
 }
 
-// ================================
-// FUNÇÃO PARA VOZ
-// ================================
+
 function falarVoz() {
     if (!('webkitSpeechRecognition' in window)) {
         alert("Seu navegador não suporta reconhecimento de voz.");
@@ -64,9 +59,7 @@ function falarVoz() {
     };
 }
 
-// ================================
-// FUNÇÃO PARA SUGESTÃO DE ROUPA
-// ================================
+
 async function sugestaoIA() {
     const temperatura = document.querySelector('.temperatura').textContent;
     const umidade = document.querySelector('.umidade').textContent;
